@@ -42,10 +42,10 @@ var rules = map[string]matches{
 }
 
 func matchRules(point, nextPoint string) int {
-	pointPlayer := 0               // Score Counting
+	pointPlayer := 0         // Score Counting
 	var shape InputBlock = 0 // Default value
 
-    playerRule := rules[point]
+	playerRule := rules[point]
 
 	switch point {
 	case "A", "X":
@@ -76,7 +76,7 @@ func getInput(key []string) (playerOneScore, playerTwoScore string) {
 }
 
 func DayTwoExec(pathname string) int {
-    score := 0
+	score := 0
 
 	scanner, file := readFile(pathname)
 
@@ -85,7 +85,7 @@ func DayTwoExec(pathname string) int {
 
 		p1, p2 := getInput(strings.Split(element, " "))
 
-        score += matchRules(p2, p1)
+		score += matchRules(p2, p1)
 	}
 
 	defer file.Close()
