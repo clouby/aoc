@@ -1,33 +1,17 @@
 package lib
 
 import (
-	"bufio"
 	"log"
-	"os"
 	"strconv"
+
+	filex "github.com/clouby/aoc/utils/file"
 )
-
-func readFile(pathname string) (*bufio.Scanner, *os.File) {
-	f, err := os.Open(pathname)
-
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	scanner := bufio.NewScanner(f)
-
-	if err := scanner.Err(); err != nil {
-		log.Fatal(err)
-	}
-
-	return scanner, f
-}
 
 func DayOneExec(pathname string) int {
 	maxCalories := 0
 	counter := 0
 
-	scannerElements, file := readFile(pathname)
+	scannerElements, file := filex.Read(pathname)
 
 	for scannerElements.Scan() {
 

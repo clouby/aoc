@@ -2,6 +2,8 @@ package lib
 
 import (
 	"strings"
+
+	filex "github.com/clouby/aoc/utils/file"
 )
 
 const ABC string = "abcdefghijklmnopqrstuvwxyz"
@@ -21,7 +23,7 @@ func generatePriority(values string) map[string]int {
 func DayThreeExec(pathname string) int {
 
 	sum := 0
-	scannerElements, file := readFile(pathname)
+	scannerElements, file := filex.Read(pathname)
 	priorities := generatePriority(ABC)
 
 	for scannerElements.Scan() {

@@ -3,6 +3,8 @@ package lib
 import (
 	"strconv"
 	"strings"
+
+	filex "github.com/clouby/aoc/utils/file"
 )
 
 func getSections(text string) (string, string, string, string) {
@@ -16,7 +18,7 @@ func getSections(text string) (string, string, string, string) {
 
 func DayFourthExec(pathname string) int {
 	pairs := 0
-	scannerElements, file := readFile(pathname)
+	scannerElements, file := filex.Read(pathname)
 
 	for scannerElements.Scan() {
 		text := scannerElements.Text()

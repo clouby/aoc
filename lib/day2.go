@@ -2,6 +2,8 @@ package lib
 
 import (
 	"strings"
+
+	filex "github.com/clouby/aoc/utils/file"
 )
 
 // Rules
@@ -78,7 +80,7 @@ func getInput(key []string) (playerOneScore, playerTwoScore string) {
 func DayTwoExec(pathname string) int {
 	score := 0
 
-	scanner, file := readFile(pathname)
+	scanner, file := filex.Read(pathname)
 
 	for scanner.Scan() {
 		element := scanner.Text()

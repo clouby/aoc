@@ -5,6 +5,7 @@ import (
 	"strconv"
 	"strings"
 
+	filex "github.com/clouby/aoc/utils/file"
 	"github.com/clouby/aoc/utils/stack"
 )
 
@@ -23,7 +24,7 @@ func DayFifthExec(pathname string, mapping map[string][]interface{}) string {
 
     boostStack := createBoostStack(mapping)
 
-	scannerElements, file := readFile(pathname)
+	scannerElements, file := filex.Read(pathname)
 
 	for scannerElements.Scan() {
         lineText := scannerElements.Text()
