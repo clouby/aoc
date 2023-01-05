@@ -26,11 +26,13 @@ func main() {
 	dayThree := lib.DayThreeExec("assets/day3.txt")
 	dayFourth := lib.DayFourthExec("assets/day4.txt")
 	dayFifth := lib.DayFifthExec("assets/day5.txt", defaultValueDayFifth)
+    daySix := lib.DaySixExec("assets/day6.txt")
 
 	// Print all the results
 	fmt.Printf("Day 1: Calorie Counting - Result: %v \n", dayOne)
 	fmt.Printf("Day 2: Rock Paper Scissors - Result: %v \n", dayTwo)
 	fmt.Printf("Day 3: Rucksack Reorganization - Result: %v \n", dayThree)
 	fmt.Printf("Day 4: Camp Cleanup - Result: %v \n", dayFourth)
-	fmt.Printf("Day 4: Supply Stacks - Result: %v \n", dayFifth)
+	fmt.Printf("Day 5: Supply Stacks - Result: %v \n", dayFifth)
+    fmt.Printf("Day 6: Tuning Trouble - Result: %v \n", daySix)
 }
